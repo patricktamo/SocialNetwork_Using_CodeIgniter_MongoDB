@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
+	private $collection='users';
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,6 +21,23 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->output->enable_profiler(true);
 		$this->load->view('welcome_message');
+	}
+
+
+	public function accueil()
+	{
+		//test
+			$this->load->model('test_model');
+		# code...
+
+		$data = array();
+
+
+		$data['valeur'] = $this->test_model->essai_bd($this->collection);
+		$this->load->library('layout');
+
+		$this->layout->views('vue1')->views('vue2')->view('vue3',$data);
 	}
 }
