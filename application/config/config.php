@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/SocialNetwork_Using_CodeIgniter_MongoDB/';
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -59,7 +59,7 @@ $config['uri_protocol']	= 'REQUEST_URI';
 | http://codeigniter.com/user_guide/general/urls.html
 */
 
-$config['url_suffix'] = '';
+$config['url_suffix'] = '.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +71,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language']	= 'french';
 
 /*
 |--------------------------------------------------------------------------
