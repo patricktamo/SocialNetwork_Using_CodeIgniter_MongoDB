@@ -59,7 +59,8 @@
 				{
 					$this->var['titre'] = $titre;
 					return true;
-				}return false;
+				}
+				return false;
 			} 
 
 			public function set_charset($charset)
@@ -89,7 +90,7 @@
 
 			public function ajouter_js($nom)
 			{
-				if(is_string($nom) AND !empty($nom) AND file_exists('./assets/javascript/' . $nom . '.js'))
+				if(is_string($nom) AND !empty($nom) AND file_exists('./assets/js/' . $nom . '.js'))
 				{
 					$this->var['js'][] = js_url($nom);
 					return true;

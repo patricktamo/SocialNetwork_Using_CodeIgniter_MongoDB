@@ -3,20 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
 	<head>
 		<title><?php echo $titre; ?></title>
-		<meta http-equiv="Content-Type" content="text/html; charset=<?php
-		echo $charset; ?>" />
+		<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $charset; ?>" />
 		<?php foreach($css as $url): ?>
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php
-		echo $url; ?>" />
+			<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $url; ?>" />
 		<?php endforeach; ?>
 	</head>
 	<body>
 
 
 		<!-- contenu de la page-->
-		<div id="contenu">
 			<?php echo $output; ?>
-		</div>
 
 		<!-- Inclusion des fichier jQuery / javascript -->	
 		<?php foreach($js as $url): ?>

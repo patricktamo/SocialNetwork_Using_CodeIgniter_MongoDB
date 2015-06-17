@@ -1,9 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Login extends CI_Controller {
 
-	private $collection='Membres';
 	/**
 	 * Index Page for this controller.
 	 *
@@ -22,22 +21,22 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->output->enable_profiler(true);
-		$this->load->view('welcome_message');
+		$this->accueil();
 	}
 
 
 	public function accueil()
 	{
-		//test
-			$this->load->model('test_model');
-		# code...
-
-		$data = array();
-
-
-		$data['valeur'] = $this->test_model->essai_bd($this->collection);
+		//Chargement du helper assets
+		$this->load->helper('assets');
+		//Chargement du generateur de template
 		$this->load->library('layout');
-
-		$this->layout->views('vue1')->views('vue2')->view('vue3',$data);
+		//Chargement des fichiers  css
+		$this->layout->ajouter_css('bootstrap');
+		//$this->layout->ajouter_css('bootstrap-responsive');
+		//Chargement des fichiers  js
+		$this->layout->ajouter_js('bootstrap.min');
+		# Mise en place du formulaire de connection et d'inscription
+		$this->layout->view('vue1');
 	}
 }
